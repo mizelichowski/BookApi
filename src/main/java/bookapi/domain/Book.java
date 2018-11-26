@@ -1,7 +1,6 @@
 package bookapi.domain;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
 public class Book {
@@ -14,7 +13,7 @@ public class Book {
     private String description;
     private Integer pageNumber;
     private String format;
-    private Date releaseDate;
+    private String releaseDate;
 
     public Book() {
     }
@@ -39,7 +38,7 @@ public class Book {
         private String description;
         private Integer pageNumber;
         private String format;
-        private Date releaseDate;
+        private String releaseDate;
 
         public Builder() {
         }
@@ -79,7 +78,7 @@ public class Book {
             return this;
         }
 
-        public Builder releaseDate(Date val) {
+        public Builder releaseDate(String val) {
             releaseDate = val;
             return this;
         }
