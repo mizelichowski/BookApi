@@ -31,9 +31,9 @@ public class BookController {
         return bookService.getAllBooks();
     }
 
-    @GetMapping(path = "/a", params = {"name"})
+    @GetMapping(path = "/a", params = {"name"}, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseBody
-    public List<Book> getBooksByAuthorName(@RequestParam("name") String name) {
+    public List<Book> getBooksByAuthorName(@RequestParam("name") @PathVariable(value = "name") String name) {
         return bookService.findByAuthorName(name);
     }
 }

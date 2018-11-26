@@ -87,4 +87,36 @@ public class Book {
             return new Book(this);
         }
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public Integer getPageNumber() {
+        return pageNumber;
+    }
+
+    public String getFormat() {
+        return format;
+    }
+
+    public String getReleaseDate() {
+        return releaseDate;
+    }
 }

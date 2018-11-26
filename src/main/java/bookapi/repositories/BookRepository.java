@@ -12,7 +12,7 @@ import java.util.List;
 public interface BookRepository extends CrudRepository<Book, Long> {
 
     @Query(nativeQuery = true,
-            value = "SELECT * FROM bookapi.book WHERE author = :authorName")
-    List<Book> findByAuthorName(@Param("authorName") String authorName);
+            value = "SELECT * FROM bookapi.book WHERE author LIKE %:name%")
+    List<Book> findByAuthorName(@Param("name") String name);
 
 }
