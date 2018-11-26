@@ -1,21 +1,20 @@
 package bookapi.domain;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import java.util.Set;
+import javax.persistence.*;
+import java.util.Date;
 
+@Entity
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
     private String author;
-    private Set<String> genres;
+    private String genre;
     private String description;
     private Integer pageNumber;
     private String format;
-    private Set<String> countriesAvailable;
+    private Date releaseDate;
 
     public Book() {
     }
@@ -24,22 +23,23 @@ public class Book {
         id = builder.id;
         name = builder.name;
         author = builder.author;
-        genres = builder.genres;
+        genre = builder.genre;
         description = builder.description;
         pageNumber = builder.pageNumber;
         format = builder.format;
-        countriesAvailable = builder.countriesAvailable;
+        releaseDate = builder.releaseDate;
     }
+
 
     public static final class Builder {
         private Long id;
         private String name;
         private String author;
-        private Set<String> genres;
+        private String genre;
         private String description;
         private Integer pageNumber;
         private String format;
-        private Set<String> countriesAvailable;
+        private Date releaseDate;
 
         public Builder() {
         }
@@ -59,8 +59,8 @@ public class Book {
             return this;
         }
 
-        public Builder genres(Set<String> val) {
-            genres = val;
+        public Builder genre(String val) {
+            genre = val;
             return this;
         }
 
@@ -79,8 +79,8 @@ public class Book {
             return this;
         }
 
-        public Builder countriesAvailable(Set<String> val) {
-            countriesAvailable = val;
+        public Builder releaseDate(Date val) {
+            releaseDate = val;
             return this;
         }
 
