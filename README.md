@@ -3,7 +3,9 @@
 Just a simple REST API for Books.
 
 ----
-Available requests:
+# Available requests:
 
-- /total - Displays the total amount of books
-- /all - Displays all books
+| Request type | Request name | Request parameter |
+| ------------ | ------------ | ----------------- |
+| GET          | /total       | none              |
+| GET          | /all         | none              |
