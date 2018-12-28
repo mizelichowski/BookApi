@@ -1,6 +1,6 @@
 # BookApi
 
-Just a simple REST API for Books.
+Just a simple REST API for Book management.
 
 ----
 # Available requests:
